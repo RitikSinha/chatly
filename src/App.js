@@ -1,8 +1,9 @@
-import SigninScreen from "./screens/SigninScreen";
+// import SigninScreen from "./screens/SigninScreen";
+import { HomeScreen } from "./screens/HomeScreen";
 function App() {
   return (
     <div className="App">
-      <SigninScreen />
+      <HomeScreen />
     </div>
   );
 }
