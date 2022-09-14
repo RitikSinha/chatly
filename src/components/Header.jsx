@@ -9,11 +9,11 @@ const Header = ({ photo, fullName, isChat }) => {
       <div
         className={
           isChat
-            ? "bg-white flex items-center justify-around py-3 px-3 md:w-1/2"
-            : "flex items-center py-3 px-3 md:w-1/2"
+            ? "bg-white w-full flex items-center justify-around py-3 px-3 md:w-1/2"
+            : "flex items-center w-full py-5 px-3 md:w-1/2"
         }
       >
-        <div>
+        <div onClick={() => window.history.back()}>
           <img src={Left} width="30" alt="" className=" rounded-full mr-3" />
         </div>
         <div className={isChat ? "block" : "hidden"}>

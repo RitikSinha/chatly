@@ -1,7 +1,10 @@
 import React from "react";
 import BG from "../assets/background.png";
 import Person from "../assets/persons.png";
+import { useNavigate } from "react-router-dom";
 const SigninScreen = () => {
+  const navigate = useNavigate();
+
   return (
     <>
       <div className=" h-screen w-screen flex flex-col items-center">
@@ -17,7 +20,10 @@ const SigninScreen = () => {
         <h1 className=" text-zinc-500 font-medium mt-3 text-center">
           Connect people around the world for free
         </h1>
-        <button className=" bg-brand py-5 px-8 rounded-full font-medium text-lg text-white mt-5">
+        <button
+          onClick={(e) => navigate("/")}
+          className=" bg-brand py-5 px-8 rounded-full font-medium text-lg text-white mt-5"
+        >
           Sign in with Google
         </button>
         <h1 className=" text-sm text-zinc-500 font-medium mt-8 text-center">

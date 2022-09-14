@@ -8,7 +8,7 @@ const ChatScreen = () => {
       <Header isChat={true} />
 
       <div className=" fixed bottom-0  w-full bg-white px-3 py-8 flex justify-center">
-        <div className="flex items-center justify-center px-3 py-2 bg-backgraound rounded-md md:w-1/2 md:justify-between ">
+        <div className="flex items-center justify-center px-3 py-2 bg-background rounded-md md:w-1/2 md:justify-between ">
           <input
             placeholder="Type your message..."
             className=" focus:outline-none bg-transparent"

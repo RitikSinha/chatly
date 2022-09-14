@@ -856,6 +856,21 @@ body {
   background-color: #68d391;
 }
 
+.hover\:bg-brand:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(112 62 254 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-background:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 243 243 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-gray-100:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
+
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -870,8 +885,16 @@ body {
     width: 50%;
   }
 
+  .md\:items-center {
+    align-items: center;
+  }
+
   .md\:justify-start {
     justify-content: flex-start;
+  }
+
+  .md\:justify-center {
+    justify-content: center;
   }
 
   .md\:justify-between {
