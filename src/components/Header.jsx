@@ -3,16 +3,22 @@ import Tony from "../assets/tony.jpg";
 import Left from "../assets/icons/Left.png";
 import Video from "../assets/icons/Video.png";
 import Call from "../assets/icons/Phone.png";
-const Header = () => {
+const Header = ({ photo, fullName, isChat }) => {
   return (
     <div className="fixed w-full bg-white flex justify-center">
-      <div className="  bg-white flex items-center justify-around py-3 px-3 md:w-1/2">
+      <div
+        className={
+          isChat
+            ? "bg-white flex items-center justify-around py-3 px-3 md:w-1/2"
+            : "flex items-center py-3 px-3 md:w-1/2"
+        }
+      >
         <div>
-          <img src={Left} width="30" alt="" className=" rounded-full" />
+          <img src={Left} width="30" alt="" className=" rounded-full mr-3" />
         </div>
-        <div>
+        <div className={isChat ? "block" : "hidden"}>
           <img
-            src={Tony}
+            src={photo ? photo : Tony}
             alt=""
             width="70"
             height="70"
@@ -20,13 +26,13 @@ const Header = () => {
           />
         </div>
         <div>
-          <h1>Tony Stark</h1>
-          <p className="text-sm text-green-600">Online</p>
+          <h1>{fullName ? fullName : "Tony Stark"}</h1>
+          <p className={isChat ? "text-sm text-green-600" : "hidden"}>Online</p>
         </div>
-        <div>
+        <div className={isChat ? "block" : "hidden"}>
           <img src={Video} alt="" width="30" className=" rounded-full" />
         </div>
-        <div>
+        <div className={isChat ? "block" : "hidden"}>
           <img src={Call} alt="" width="30" className=" rounded-full" />
         </div>
       </div>
